@@ -16,8 +16,8 @@
 
 define('WP_REDIS_HOST', 'group3.xxwny3.0001.usw2.cache.amazonaws.com');
  
-define('WP_HOME','http://d2b2d18coi0j1o.cloudfront.net');
-define('WP_SITEURL','http://d2b2d18coi0j1o.cloudfront.net');
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -84,3 +84,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/** Disable file editing from the WordPress dashboard. */
+define('DISALLOW_FILE_EDIT', true);
